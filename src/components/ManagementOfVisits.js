@@ -19,7 +19,7 @@ const ManagementOfVisits = () => {
     const fetchVisitors = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/visitors/getVisitors"
+          "https://nh-backend.onrender.com/api/visitors/getVisitors"
         );
         console.log(response.data);
         setVisitors(response.data);
@@ -34,7 +34,7 @@ const ManagementOfVisits = () => {
     setDisplayInputs(true);
     try {
       const result = await axios.post(
-        "http://localhost:5000/api/visitors/addVisitor",
+        "https://nh-backend.onrender.com/api/visitors/addVisitor",
         newVisitor
       );
       const addedVisitor = result.data;
@@ -59,7 +59,7 @@ const ManagementOfVisits = () => {
   const handleRemoveVisitor = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/visitors/removeVisitor/${id}`
+        `https://nh-backend.onrender.com/api/visitors/removeVisitor/${id}`
       );
       setVisitors((prevVisitors) =>
         prevVisitors.filter((visitor) => visitor._id !== id)

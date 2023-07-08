@@ -28,7 +28,7 @@ function OrderingMedications() {
       result = await (async () => {
         try {
           return await axios.post(
-            "http://localhost:5000/api/medications/OrderMedication",
+            "https://nh-backend.onrender.com/api/medications/OrderMedication",
             medication
           );
         } catch (error) {

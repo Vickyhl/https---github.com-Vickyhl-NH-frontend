@@ -21,7 +21,7 @@ function WorkSchedule() {
     const fetchSchedule = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/users/getSchedule"
+          "https://nh-backend.onrender.com/api/users/getSchedule"
         );
 
         // console.log(response.data.schedule);
@@ -54,9 +54,12 @@ function WorkSchedule() {
 
       console.log(formattedSchedule);
 
-      await axios.post("http://localhost:5000/api/users/saveSchedule", {
-        newSchedule: formattedSchedule,
-      });
+      await axios.post(
+        "https://nh-backend.onrender.com/api/users/saveSchedule",
+        {
+          newSchedule: formattedSchedule,
+        }
+      );
       setIsEditing(false);
     } catch (error) {
       console.error("Error saving schedule:", error);

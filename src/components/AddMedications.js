@@ -24,7 +24,7 @@ function AddMedications() {
     // Send the medication object to the backend
     console.log(medication);
     const result = await axios.post(
-      `http://localhost:5000/api/medications/AddMedication`,
+      `https://nh-backend.onrender.com/api/medications/AddMedication`,
       medication
     );
     const userData = JSON.parse(localStorage.getItem("user"));

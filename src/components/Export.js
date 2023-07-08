@@ -8,7 +8,7 @@ function Export() {
 
   const handleAudit = async () => {
     const response = await axios.get(
-      "http://localhost:5000/api/auditTrails/auditExport"
+      "https://nh-backend.onrender.com/api/auditTrails/auditExport"
     );
     setAuditData(response.data);
     if (response.data) {
@@ -18,7 +18,7 @@ function Export() {
 
   const handleMedications = async () => {
     const response = await axios.get(
-      "http://localhost:5000/api/auditTrails/medicationsExport"
+      "https://nh-backend.onrender.com/api/auditTrails/medicationsExport"
     );
     // console.log(response.data);
     exportDataToCSV(response.data);

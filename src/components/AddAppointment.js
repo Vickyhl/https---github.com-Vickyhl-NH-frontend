@@ -32,7 +32,7 @@ function AddAppointment() {
       therapistName,
     };
     const result = await axios.post(
-      `http://localhost:5000/api/users/AddAppointment/${patientId}`,
+      `https://nh-backend.onrender.com/api/users/AddAppointment/${patientId}`,
       appointmen
     );
 
@@ -48,7 +48,7 @@ function AddAppointment() {
   const handleCheckUser = async (e) => {
     e.preventDefault();
     const result = await axios.get(
-      `http://localhost:5000/api/users/getUserById/${patientId}`
+      `https://nh-backend.onrender.com/api/users/getUserById/${patientId}`
     );
     if (result.data.message === "The requested id is not found") {
       setErrorMessage("The requested id is not found");

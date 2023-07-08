@@ -17,7 +17,7 @@ export const logAuditTrail = async (user, eventName, eventDetails) => {
   };
   // console.log(logEntry);
   const responseData = await axios.post(
-    `http://localhost:5000/api/auditTrails/saveAuditTrail`,
+    `https://nh-backend.onrender.com/api/auditTrails/saveAuditTrail`,
     logEntry
   );
 };
@@ -43,7 +43,7 @@ export const logAuditTrail = async (user, eventName, eventDetails) => {
 //   console.log(newObject);
 
 //   const responseData = await axios.post(
-//     `http://localhost:5000/api/auditTrails/saveAuditTrail`,
+//     `https://nh-backend.onrender.com/api/auditTrails/saveAuditTrail`,
 //     newObject
 //   );
 // };

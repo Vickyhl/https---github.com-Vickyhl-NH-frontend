@@ -46,7 +46,7 @@ function NursingHomeAdmissionForm() {
     };
 
     const result = await axios.post(
-      `http://localhost:5000/api/users/admissionForm`,
+      `https://nh-backend.onrender.com/api/users/admissionForm`,
       formData
     );
     console.log(result.data.success);

@@ -18,7 +18,7 @@ function MedicalHistory() {
 
   const handleViewMedicalHistory = async () => {
     const result = await axios.get(
-      `http://localhost:5000/api/users/getUserById/${patientId}`
+      `https://nh-backend.onrender.com/api/users/getUserById/${patientId}`
     );
     if (result.data.message === "The requested id is not found") {
       setErrorMessage("The requested id is not found");
@@ -144,7 +144,7 @@ function MedicalHistory() {
       };
 
       await axios.put(
-        `http://localhost:5000/api/users/updateUser/${patient.id}`,
+        `https://nh-backend.onrender.com/api/users/updateUser/${patient.id}`,
         updatedPatient
       );
 

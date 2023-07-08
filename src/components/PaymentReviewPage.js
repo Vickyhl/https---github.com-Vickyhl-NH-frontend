@@ -46,7 +46,7 @@ const PaymentReviewPage = () => {
   const checkRecipientExistence = async () => {
     console.log(ssn);
     const result = await axios.get(
-      "http://localhost:5000/api/users/getUserBySsn",
+      "https://nh-backend.onrender.com/api/users/getUserBySsn",
       {
         params: {
           ssn: ssn,

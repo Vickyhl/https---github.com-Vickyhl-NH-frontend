@@ -57,7 +57,7 @@ const Register = () => {
     }
 
     const res = await axios.post(
-      "http://localhost:5000/api/users/signup",
+      "https://nh-backend.onrender.com/api/users/signup",
       user
     );
     // console.log(res.data.message);

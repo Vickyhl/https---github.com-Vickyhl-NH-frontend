@@ -31,7 +31,7 @@ const NutritionalMonitoringPage = () => {
       weightMeasurements,
     };
     const response = await axios.post(
-      `http://localhost:5000/api/users/updateUsersInfo/${patientId}`,
+      `https://nh-backend.onrender.com/api/users/updateUsersInfo/${patientId}`,
       formData
     );
     // Clear the form fields
@@ -50,7 +50,7 @@ const NutritionalMonitoringPage = () => {
     try {
       // Make the API call to fetch existing data
       const response = await axios.get(
-        `http://localhost:5000/api/users/getUsersInfo/${patientId}`
+        `https://nh-backend.onrender.com/api/users/getUsersInfo/${patientId}`
       );
       console.log(response.data);
       const data = response.data;

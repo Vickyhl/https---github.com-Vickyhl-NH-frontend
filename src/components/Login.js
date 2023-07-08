@@ -25,7 +25,7 @@ export const Login = () => {
     e.preventDefault();
 
     const result = await axios.post(
-      "http://localhost:5000/api/users/login",
+      "https://nh-backend.onrender.com/api/users/login",
       user
     );
     if (result.data.message === "Your email or password is incorrect") {

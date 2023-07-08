@@ -46,7 +46,7 @@ function AppointmentsPage() {
     try {
       // Send a POST request to update the appointments in the backend
       await axios.post(
-        "http://localhost:5000/api/users/updateAppointment",
+        "https://nh-backend.onrender.com/api/users/updateAppointment",
         dataToSave
       );
       console.log("Appointments updated successfully");
@@ -77,7 +77,7 @@ function AppointmentsPage() {
     // Call delete endpoint to remove the appointment from backend
     try {
       await axios.post(
-        "http://localhost:5000/api/users/removeAppointment",
+        "https://nh-backend.onrender.com/api/users/removeAppointment",
         appointment
       );
       console.log("Appointment deleted successfully");
@@ -89,7 +89,7 @@ function AppointmentsPage() {
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios.get(
-        "http://localhost:5000/api/users/getAppointments"
+        "https://nh-backend.onrender.com/api/users/getAppointments"
       );
       console.log(result.data.extractedAppointments);
       const deepClonedAppointments = JSON.parse(
