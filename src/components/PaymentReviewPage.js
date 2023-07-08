@@ -35,8 +35,8 @@ const PaymentReviewPage = () => {
         ],
         mode: "payment",
         //redirect to the last created menu
-        successUrl: `http://localhost:3000/`,
-        cancelUrl: "http://localhost:3000/",
+        successUrl: `https://nursinghomefrontend.vercel.app//`,
+        cancelUrl: "https://nursinghomefrontend.vercel.app//",
       });
     } else {
       setErrorMessage("Check your input fields before proceeding");
